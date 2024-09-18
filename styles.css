@@ -1,0 +1,105 @@
+body {
+  font-family: "Press Start 2P", system-ui;
+  height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.gameArea {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: rgba(7, 26, 49, 0.6);
+  top: 182px;
+  border: #919bbec7 10px solid;
+  border-radius: 4px;
+  backdrop-filter: blur(4px); /*it will blur everything behind the game area*/
+  /*adjusting the gamearea in the arcade game section*/
+  transform: perspective(1000px) rotateX(33deg) scaleX(0.54) scaleY(0.84);
+}
+
+.bg {
+  position: absolute;
+  height: 1000px;
+  z-index: -1; /*puts the game area in front of the machine image*/
+}
+
+.paddle {
+  height: 100px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute; /*it will scale it according to its parent element that is the game area*/
+  top: 150px;
+}
+.paddle2 {
+  right: 0;
+}
+
+.ball {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  left: 290px; /*aligning to move from left of the area*/
+  top: 190 px; /*aligning to move from the top of the area*/
+  box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.9); /*adding shadow to the ball*/
+}
+.net {
+  position: absolute;
+  border-right: 8px rgba(255, 255, 255, 0.3) dotted;
+  height: 96%; /* giving it this height */
+  top: 2%; /*leaving space from 2 percent above as height takes 4 percent below*/
+  left: calc(50% - 4px); /*moving it to the center*/
+}
+
+.title {
+  position: absolute; /* freeing it from the other elements*/
+  top: 88px;
+  font-size: 26px;
+}
+
+.score {
+  position: absolute; /* freeing it from the other elements*/
+  top: 88px;
+  display: flex;
+  width: 60px; /*to fill the score with the specific area alloted to it*/
+  height: 60px; /*to fill the score with the specific area alloted to it*/
+  justify-content: center;
+  align-items: center;
+}
+
+.player1Score {
+  left: calc(50% - 200px);
+}
+.player2Score {
+  right: calc(50% - 200px);
+}
+
+.startText {
+  position: absolute;
+  margin: 0;
+  top: 70%;
+  z-index: 1; /*bringing it to the front of the page*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #222;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.vignett {
+  height: 100dvh;
+  width: 100dvw;
+  background: radial-gradient(
+    circle,
+    /*adding background highlights*/ rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
