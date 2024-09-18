@@ -48,6 +48,6 @@
         <li>Multiplayer mode over a network.</li>
         <li>Improved AI for single-player mode.</li>
     </ul>
-    <p>Feel free to try it out and let me know if you have any feedback or suggestions for future enhancements!</p>
+    <p>Feel free to try it out by clicking on this link: https://retro-arcade-pong-game.netlify.app/ and let me know if you have any feedback or suggestions for future enhancements at my email: harris.giki@gmail.com!</p>
 </body>
 </html>
